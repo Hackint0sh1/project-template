@@ -1,12 +1,21 @@
 title('My Project');
 
 // put variables here, just like kahn academy
+var x = 391
+var y = 485
+var speed = 5
+var ySpeed = 5
+var boundL = 0
+var boundR = 400
+var boundT = 0
+var boundB = 400
+var xSize = 80
+var ySize = 15
 
 var Xpos = 350
 var Ypos = 500
 var BallX = 391
 var BallY = 485
-var speed = 10
 var Top = 0
 var Left = 0
 var Right =  800
@@ -42,18 +51,32 @@ var draw = function() {
     if (keyIsPressed && keyCode === LEFT) {
             Xpos = Xpos - 9;
     }
-
-    //ball
+      //ball
    fill(4, 90, 222);
    ellipse(BallY, BallY, 20, 20);
 
    BallY = BallY - speed; 
 
    if (BallY < 0) {
-       speed = -10;
+       speed = -5;
     }
 
+    if (BallY > Top) {
+	BallX = +5;
+     }
+    if (BallY > Ypos) {
+	speed = +5;
+     }
+    if (BallX > Xpos) {
+	speed = -5;
+     }
+    
+
 };
+
+
+
+
 
 
 
