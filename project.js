@@ -1,14 +1,13 @@
-title('My Project');
-
+title('LENNY');
 // put variables here, just like kahn academy
 var x = 391
 var y = 485
 var speed = 5
 var ySpeed = 5
 var boundL = 0
-var boundR = 400
+var boundR = 800
 var boundT = 0
-var boundB = 400
+var boundB = 600
 var xSize = 80
 var ySize = 15
 
@@ -51,7 +50,28 @@ var draw = function() {
     if (keyIsPressed && keyCode === LEFT) {
             Xpos = Xpos - 9;
     }
-      //ball
+ ellipse(x, y, 50, 50);
+    
+    x = x + speed;
+    y = y + ySpeed;
+    
+    if (x > boundR){
+        speed = -2.5 - Math.random() * 2.5;
+    }
+    
+    if( x < boundL){
+        speed = 2.5 + Math.random() * 2.5;
+    }
+    
+    if (y > boundB) {
+        ySpeed = -2.5 - Math.random() * 2.5;
+    }
+    
+    if (y < boundT) {
+        ySpeed = 2.5 + Math.random() * 2.5;
+    }
+};
+/*   //ball
    fill(4, 90, 222);
    ellipse(BallY, BallY, 20, 20);
 
@@ -73,6 +93,8 @@ var draw = function() {
     
 
 };
+*/
+
 
 
 
