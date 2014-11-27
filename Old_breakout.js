@@ -10,7 +10,7 @@ var boundT = 0
 var boundB = 600
 var xSize = 80
 var ySize = 15
-
+///////////////////
 var Xpos = 350
 var Ypos = 500
 var BallX = 391
@@ -50,7 +50,8 @@ var draw = function() {
     if (keyIsPressed && keyCode === LEFT) {
             Xpos = Xpos - 9;
     }
- ellipse(x, y, 50, 50);
+ //  BALL
+    ellipse(x, y, 50, 50);
     
     x = x + speed;
     y = y + ySpeed;
