@@ -1,4 +1,4 @@
-
+title("Keep refrooshing you scrub");
 // put variables here, just like kahn academy
 //  var img = processing.loadImage("Fab.jpg");
 var music;
@@ -27,7 +27,18 @@ var random6 = 450
 var random7 = 150
 var random8 = 150
 var random9 = 150
-
+var random10 = 300
+var random11 = 300
+var random12 = 300
+var random13 = 450 
+var random14 = 450
+var random15 = 450
+var random16 = 150
+var random17 = 150
+var random18 = 150
+var random19 = 300
+var random20 = 300
+var random21 = 300
 
 
 //~~~~~~~~~~~~~~
@@ -42,21 +53,31 @@ var cherry6 = 20;
 var cherry7 = 20;
 var cherry8 = 20;
 var cherry9 = 20;
-
-
+var cherry10 = 20;
+var cherry11 = 20;
+var cherry12 = 20;
+var cherry13 = 20;
+var cherry14 = 20;
+var cherry15 = 20;
+var cherry16 = 20;
+var cherry17 = 20;
+var cherry18 = 20;
+var cherry19 = 20;
+var cherry20 = 20;
+var cherry21 = 20;
 
 
 
 // this code is executed once when the program is started
 var  setup = function() {
-    music = new Audio("SSSU.wav");
+    music = new Audio("skeletoons.mp3");
 	music.controls = true;
 	music.loop = true;
 	music.autoplay = true;
 	document.body.appendChild(music);
-    b = loadImage("barn1.jpg");
+    b = loadImage("spooky.jpg");
     pig = loadImage("football.gif");
-    cherry = loadImage("CanOfSoup.png");
+    cherry = loadImage("football.gif");
     corn = loadImage("corn.png");
     knife = loadImage("knife.gif");
     pumpkin = loadImage("pumpkin.gif");
@@ -97,8 +118,16 @@ var draw = function() {
     random7 += dir1;
     random8 += dir2;
     random9 += dir3;
-    
-
+    random10 += dir2;
+    random11 += dir3;
+    random12 += dir1;
+    random13 += dir2;
+    random14 += dir3;
+    random15 += dir2;
+    random16 += dir3;
+    random19 += dir1;
+    random20 += dir2;
+    random21 += dir3;
 
 
     cherryY += 1;
@@ -111,8 +140,18 @@ var draw = function() {
     cherry7 += 1;
     cherry8 += 1;
     cherry9 += 1;
-  
-
+    cherry10 += 1
+    cherry11 += 1;
+    cherry12 += 1;
+    cherry13 += 1
+    cherry14 += 1;
+    cherry15 += 1;
+    cherry16 += 1
+    cherry17 += 1;
+    cherry18 += 1;
+    cherry19 += 1
+    cherry20 += 1;
+    cherry1 += 1;
 
 
     image(b, 0, 0);
@@ -135,8 +174,24 @@ var draw = function() {
     image(pumpkin, random8, cherry8);
     image(corn, random9, cherry9);
     
+    image(knife, random8, cherry8);
+    image(pumpkin, random9, cherry9);
+    image(corn, random10, cherry10);
 
+    image(knife, random11, cherry11);
+    image(pumpkin, random12, cherry12);
+    image(corn, random13, cherry13);
+    
+    image(knife, random14, cherry14);
+    image(pumpkin, random15, cherry15);
+    image(corn, random16, cherry16);
 
+    image(knife, random17, cherry17);
+    image(pumpkin, random18, cherry18);
+    image(corn, random19, cherry19);
+
+    image(cherry, random20, cherry20);
+    image(cherry, random21, cherry21);
 
  // Cluster of objects in the background raining down
 if(cherryY > 600) {
@@ -153,11 +208,11 @@ if(cherry3 > 600) {
     }
 }
 
-    if(x > 0 && keyIsPressed && keyCode == LEFT ) {
+    if(x > 0 && keyIsPressed && keyCode === LEFT ) {
 	x = x - 33;
     }
 
-    if(x < 700 && keyIsPressed && keyCode == RIGHT ) {
+    if(x < 700 && keyIsPressed && keyCode === RIGHT ) {
 	x = x + 33;
     }
 
@@ -172,9 +227,7 @@ if(cherry3 > 600) {
             
             Xpos = Xpos + 9;  
     }
-
     if (keyIsPressed && keyCode === LEFT) {
             Xpos = Xpos - 9;
     }
-
 */
