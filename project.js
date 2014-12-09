@@ -6,7 +6,7 @@ var speed = 5;
 var ySpeed = 5;
 var boundL = 0;
 var boundR = 800;
-var boundT = 0;
+var boundT = 60;
 var boundB = 600;
 var xSize = 80;
 var ySize = 15;
@@ -21,10 +21,8 @@ var Right =  800;
 var Bottom = 600;
 var dClicker = 0;
 var brickSize = 54;
-// put functions here, just like kahn academy
 
-    
-var i = [
+
 
 
 // this code is executed once when the program is started
@@ -57,7 +55,13 @@ var draw = function() {
     x = x + speed;
     y = y + ySpeed;
    
-  
+     for(var i = 0; i < 800; i +=60){
+        
+        stroke(255, 255, 255);
+        strokeWeight(3);
+        fill(64, 29, 64);
+        rect(i, 20, brickSize, brickSize/2);
+    }
 
     
     if (x > boundR){
@@ -79,15 +83,19 @@ var draw = function() {
         background(0, 21, 255);
 	if (dClicker === 1) {
 	    dClicker = 0;
-	    alert("YOU DIED");
+	    alert("You Died :(")
 };
         
     }
     if (y < boundT) {
         ySpeed = 2.5 + Math.random() * 2.5;
+	rect(30, 30, 30, 30);
+	rect(70, 30, 30, 30);
+	rect(50, 30, 30, 30);
+	alert("hi");
     }
-};
+
 
    
-    
+};
 
